@@ -31,3 +31,11 @@ func ReadInput(path string) []string {
 	}
 	return lines
 }
+
+func GetIntSlice(line string) []int {
+	var ints []int
+	for _, s := range strings.Fields(line) {
+		ints = append(ints, Atoi(s))
+	}
+	return ints
+}
