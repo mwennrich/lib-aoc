@@ -39,3 +39,11 @@ func GetIntSlice(line string) []int {
 	}
 	return ints
 }
+
+func GetArrayFromLines(lines []string) [][]string {
+	var arr [][]string
+	for _, line := range lines {
+		arr = append(arr, strings.Split(line, ""))
+	}
+	return arr
+}
