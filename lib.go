@@ -47,3 +47,13 @@ func GetArrayFromLines(lines []string) [][]string {
 	}
 	return arr
 }
+
+func DeepCopyMap(m [][]string) [][]string {
+	var copy [][]string
+	for _, row := range m {
+		var newRow []string
+		newRow = append(newRow, row...)
+		copy = append(copy, newRow)
+	}
+	return copy
+}
