@@ -2,6 +2,7 @@ package aoc
 
 import (
 	"bufio"
+	"fmt"
 	"os"
 	"strconv"
 	"strings"
@@ -56,4 +57,14 @@ func DeepCopyMap(m [][]string) [][]string {
 		copy = append(copy, newRow)
 	}
 	return copy
+}
+
+func GetXY(p string) (int, int) {
+	x, y := 0, 0
+	fmt.Sscanf(p, "%d,%d", &x, &y)
+	return x, y
+}
+
+func SetXY(x, y int) string {
+	return fmt.Sprintf("%d,%d", x, y)
 }
