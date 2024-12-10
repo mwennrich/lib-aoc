@@ -49,6 +49,19 @@ func GetArrayFromLines(lines []string) [][]string {
 	return arr
 }
 
+func GetIntArrayFromLines(lines []string) [][]int {
+	var arr [][]int
+	for _, line := range lines {
+		t := strings.Split(line, "")
+		var row []int
+		for _, s := range t {
+			row = append(row, Atoi(s))
+		}
+		arr = append(arr, row)
+	}
+	return arr
+}
+
 func DeepCopyMap(m [][]string) [][]string {
 	var copy [][]string
 	for _, row := range m {
